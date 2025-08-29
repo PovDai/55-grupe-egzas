@@ -21,7 +21,7 @@ import { deleteContainerById } from './src/api/admin/container/deleteContainer.j
 import { getLogin } from './src/api/public/getLogin.js';
 import { uploadMovieThumbnailImage } from './src/middleware/uploadMovieThumbnail.js';
 import { postImageUpload } from './src/api/admin/movies/postImageUpload.js';
-import { isAdmin } from './src/middleware/isAdmin.js';
+
 
 
 
