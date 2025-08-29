@@ -79,17 +79,21 @@ Would like to run this project locally? Open terminal and follow these steps:
 
 ## 🎅 Autorius
 
-Povilas: [Github](https://github.com/PovDai)
+6. Povilas: [Github](https://github.com/PovDai)
 
-Prisijungimai: 
-Prisijungimo vardas: Egzaminas 
-slaptažodis:egzaminas 
-email:egzaminas@egzaminas.lt
+    Prisijungimai: 
 
-P.S. 
+    Prisijungimo vardas: Egzaminas 
 
-šie failai nevieši, jie githut netalpinami:
+    slaptažodis:egzaminas 
 
-.env.development 
-.env.production 
+    email:egzaminas@egzaminas.lt
+
+ 7. P.S. 
+
+    šie failai nevieši, jie githut netalpinami:
+
+    .env.development 
+
+    .env.production 
 
