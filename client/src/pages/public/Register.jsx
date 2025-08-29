@@ -6,7 +6,7 @@ export function RegisterPage() {
     return (
 
         <>
-            <TitlePage title="Register"/>
+            <TitlePage title="Registruotis"/>
     
         <div className='container'>
             <div className='row'>

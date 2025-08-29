@@ -24,9 +24,6 @@ import { postImageUpload } from './src/api/admin/movies/postImageUpload.js';
 
 
 
-
-
-
 const app = express()
 
 

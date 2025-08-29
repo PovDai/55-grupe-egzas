@@ -69,7 +69,14 @@ export function Home() {
               <td>{box.id}</td>
               <td>{box.name}</td>
               <td>{box.category}</td>
-              <td>{box.time}</td>
+              <td>{new Date(box.time).toLocaleString('lt-LT', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+})}</td>
               <td>
               <img
               src={box.image ? `http://localhost:5539${box.image}` : defaultImg}

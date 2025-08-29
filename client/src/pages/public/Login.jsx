@@ -11,7 +11,7 @@ export function LoginPage() {
     
     return (
         <>
-            <TitlePage title="Login" />
+            <TitlePage title="Prisijungti" />
 
       <div className="container">
                 <div className="row">

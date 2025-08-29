@@ -1,6 +1,5 @@
 export function cookieParser(req, res, next) {
     req.cookies = {};
-    console.log(req.cookies)
 
     if (typeof req.headers.cookie !== 'string') {
         return next();

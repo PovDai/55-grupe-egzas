@@ -18,7 +18,7 @@ export function LogoutPage() {
 
     return (
         <main className="min-page-height">
-            <TitlePage       title="Logout" />
+            <TitlePage       title="Atsijungti" />
             <div className="container">
                 <div className="row">
                     {

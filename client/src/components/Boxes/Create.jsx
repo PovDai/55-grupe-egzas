@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router';
 import defaultImg from '../../assets/default.png';
 
 export function Create() {
-  const [img, setImg] = useState(''); // rodomas src (vietinis ar serverio)
-  const [localPreview, setLocalPreview] = useState(null); // tik vietinis preview
+  const [img, setImg] = useState(''); 
+  const [localPreview, setLocalPreview] = useState(null); 
   const [imgErr, setImgErr] = useState('');
   const [uploading, setUploading] = useState(false);
 
@@ -27,7 +27,7 @@ export function Create() {
     // 🔹 Sukuriam vietinį preview
     const preview = URL.createObjectURL(file);
     setLocalPreview(preview);
-    setImg(preview); // rodom local preview
+    setImg(preview); 
     setUploading(true);
 
     // Automatiškai atlaisvinti URL po 1 min

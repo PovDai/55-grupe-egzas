@@ -66,7 +66,14 @@ export function HomeContainer() {
               <td>{container.id}</td>
               <td>{container.name}</td>
               <td>{container.category}</td>
-              <td>{container.time}</td>
+              <td>{new Date(container.time).toLocaleString('lt-LT', {
+              year: 'numeric',
+             month: '2-digit',
+              day: '2-digit',
+             hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+              })}</td>
               <td>{container.rating/10}</td>
           
               <td>

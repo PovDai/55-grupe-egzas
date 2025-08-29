@@ -4,7 +4,7 @@ export function Page404() {
 
         <div className="container">
             <div className="row">
-            PAGE NOT FOUND 404 
+            <h1> Puslapis nerastas 404  </h1>
             </div>
         </div>
     )

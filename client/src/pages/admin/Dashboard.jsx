@@ -8,10 +8,10 @@ export function Dashboard() {
         <main>
             <div className="container">
                 <div className="row col-12">
-                        <h5>Sveiki atvyke i administravimo puslapy :
-                        <p>Esate prisijunge kaip:{role}</p>
-                        <p>Jūsų prisijungimo email:{email}</p>
-                        </h5>
+                        <h5>Sveiki atvyke į administravimo puslapy </h5>
+                        <p>Esate prisijunge kaip: {role}</p>
+                        <p>Jūsų prisijungimo email: {email}</p>
+                    
                     </div>
             </div>
         </main>
