@@ -16,6 +16,7 @@ Grožio paslaugų puslapio projektas
 -   API
 -   SQL
 -   Node.js
+-   xampp
 -   
 
 ## 🧰 Pradedant
@@ -30,6 +31,12 @@ Git  - atsisiunčiame ir įstaliuojame.
 
 ```
 https://git-scm.com
+
+Xampp - atsisiunčiame ir įsirašome.
+
+https://www.apachefriends.org/download.html
+
+
 ```
 
 ### 🏃 Jeigu norime pasileisti local server:

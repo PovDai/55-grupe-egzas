@@ -21,6 +21,7 @@ import { deleteContainerById } from './src/api/admin/container/deleteContainer.j
 import { getLogin } from './src/api/public/getLogin.js';
 import { uploadMovieThumbnailImage } from './src/middleware/uploadMovieThumbnail.js';
 import { postImageUpload } from './src/api/admin/movies/postImageUpload.js';
+import { isAdmin } from './src/middleware/isAdmin.js';
 
 
 
@@ -56,7 +57,7 @@ app.get('/api/login',  getLogin);
 app.post('/api/admin/add_user', addBox);
 app.get('/api/admin/students', getBox);
 app.get('/api/admin/get_student/:id', getBoxById);
-app.post('/api/admin/edit_user/:id',editBoxById)
+app.post('/api/admin/edit_user/:id', editBoxById)
 app.delete('/api/admin/delete/:id', deleteBoxById);
 
 app.post('/api/admin/add_container', addContainer);

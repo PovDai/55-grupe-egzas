@@ -1,5 +1,4 @@
 
-
 export async function isAdmin(req, res, next) {
    
     if (!req.user.isLoggedIn) {
