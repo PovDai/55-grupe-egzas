@@ -129,17 +129,19 @@ export function EditContainer() {
 
           <div className="mb-3">
           <label htmlFor="rating" className="form-label">Įvertinimas</label>
-          <input
-          type="number"
-          id="rating"
-          name="rating"
-           min="1"
-            max="5"
-            step="0.1"
-           className="form-control"
-           value={container.rating / 10}
-          onChange={handleChange}
-          />
+ <input
+  type="number"
+  id="rating"
+  name="rating"
+  min="0.1"
+  max="5"
+  step="0.1"
+  className="form-control"
+  value={container.rating/10}
+  onChange={e =>
+    setContainer(prev => ({ ...prev, rating: Number(e.target.value*10) }))
+  }
+/>
       </div>
 
         <div className="form-group my-3">

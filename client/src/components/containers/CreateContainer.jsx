@@ -21,7 +21,7 @@ export function CreateContainer() {
       const res = await fetch('http://localhost:5539/api/admin/add_container', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(),
+        body: JSON.stringify(values),
       });
 
       if (!res.ok) throw new Error(`Server error: ${res.status}`);
@@ -100,7 +100,7 @@ export function CreateContainer() {
             step="0.1"
            className="form-control"
            value={values.rating / 10}
-          onChange={e => setValues({ ...values, rating: e.target.value * 10 })}
+          onChange={e => setValues({ ...values, rating: Number(e.target.value) * 10 })}
           />
 </div>
             

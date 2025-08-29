@@ -85,7 +85,7 @@ export function Home() {
                   onClick={() => handleDelete(box.id)} 
                   className='btn mx-2 btn-danger'
                 >
-                  Ištrinti paslaugą
+                  Ištrinti 
                 </button>
               </td>
             </tr>

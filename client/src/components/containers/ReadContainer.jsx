@@ -30,7 +30,7 @@ import { Link, useParams } from "react-router"
         <li className="list-group-item"><b>Pavadinimas: </b>{container.name}</li>
         <li className="list-group-item"><b>Kategorija: </b>{container.category}</li>
         <li className="list-group-item"><b>Data: </b>{container.time}</li>
-        <li className="list-group-item"><b>Paslauga įvertinta: </b>{container.rating}</li>
+        <li className="list-group-item"><b>Paslauga įvertinta: </b>{container.rating/10} žvaigždute iš 5 galimų</li>
       </ul>
     </div>
   );

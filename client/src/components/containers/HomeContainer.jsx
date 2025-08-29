@@ -67,16 +67,16 @@ export function HomeContainer() {
               <td>{container.name}</td>
               <td>{container.category}</td>
               <td>{container.time}</td>
-              <td>{container.rating}</td>
+              <td>{container.rating/10}</td>
           
               <td>
-                <Link className='btn mx-1 btn-success' to={`/admin/readContainer/${container.id}`}>Peržiūrėti paslaugą</Link>
-                <Link className='btn mx-1 btn-success' to={`/admin/editContainer/${container.id}`}>Koreguoti paslaugą</Link>
+                <Link className='btn mx-2 btn-success' to={`/admin/readContainer/${container.id}`}>Peržiūrėti</Link>
+                <Link className='btn mx-2 btn-success' to={`/admin/editContainer/${container.id}`}>Koreguoti </Link>
                 <button 
                   onClick={() => handleDelete(container.id)} 
-                  className='btn mx-1 btn-danger'
+                  className='btn mx-2 btn-danger'
                 >
-                  Ištrinti paslaugą
+                  Ištrinti 
                 </button>
               </td>
             </tr>
