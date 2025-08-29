@@ -79,4 +79,10 @@ Prisijungimo vardas: Egzaminas
 slaptažodis:egzaminas 
 email:egzaminas@egzaminas.lt
 
+P.S. 
+
+šie failai nevieši, jie githut netalpinami:
+
+.env.development 
+.env.production 
 
