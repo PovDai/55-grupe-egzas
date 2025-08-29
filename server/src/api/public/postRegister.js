@@ -30,7 +30,7 @@ export async function postRegister(req, res) {
             });
         }
     } catch (error) {
-        console.log(error);
+       
         return res.status(500).json({
             status: 'error',
             msg: 'Serverio klaida',
