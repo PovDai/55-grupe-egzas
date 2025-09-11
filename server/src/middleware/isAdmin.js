@@ -1,12 +1,8 @@
-
-export async function isAdmin(req, res, next) {
-   
-    if (!req.user.isLoggedIn) {
-        return res.json({
-            status: 'error',
-            msg: 'This route is protected - login first',
-        });
-    }
+export function isAdmin(req, res, next) {
+  if (!req.cookies.loginToken || req.cookies.loginToken.length !== 20) {
+    console.log('Token nerastas arba netinkamo ilgio');
+    return next();
+}
 
     return next();
 }

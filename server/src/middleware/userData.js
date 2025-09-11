@@ -1,9 +1,7 @@
 import { connection } from "../db.js";
 
 export async function userData(req, res, next) {
-    req.user = {
-        isLoggedIn: false,
-    };
+    req.user = { isLoggedIn: false };
 
     if (!req.cookies.loginToken || req.cookies.loginToken.length !== 20) {
         return next();
@@ -11,14 +9,16 @@ export async function userData(req, res, next) {
 
     try {
         const sql = `
-            SELECT users.id, users.username, users.email,
+            SELECT users.id, users.username, users.email, users.role,
                 users.created_at AS user_created_at,
                 login_tokens.created_at AS login_token_created_at
             FROM login_tokens
             INNER JOIN users
                 ON login_tokens.user_id = users.id
-            WHERE token = ?;`;
+            WHERE token = ?;
+        `;
         const [results] = await connection.execute(sql, [req.cookies.loginToken]);
+        console.log('Login token:', req.cookies.loginToken);
 
         if (results.length !== 1) {
             return next();

@@ -30,7 +30,14 @@ import defaultImg from '../../assets/default.png';
         <li className="list-group-item"><b>Eilės numeris: </b>{box.id}</li>
         <li className="list-group-item"><b>Paslaugos pavadinimas: </b>{box.name}</li>
         <li className="list-group-item"><b>Paslaugos kategorija: </b>{box.category}</li>
-        <li className="list-group-item"><b>Data: </b>{box.time}</li>
+        <li className="list-group-item"><b>Data: </b>{new Date(box.time).toLocaleString('lt-LT', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+})}</li>
          <li className="list-group-item"><b>Paveikslėlis: </b><img
           src={box.image ? `http://localhost:5539${box.image}` : defaultImg}
           alt={box.name}

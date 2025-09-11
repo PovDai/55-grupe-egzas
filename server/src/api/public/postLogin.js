@@ -40,6 +40,7 @@ export async function postLogin(req, res) {
         }
 
         userObj = response[0];
+    
     } catch (error) {
         console.log(error);
         return res.status(500).json({
@@ -62,6 +63,7 @@ export async function postLogin(req, res) {
     try {
         const sql = `INSERT INTO login_tokens (user_id, token) VALUES (?, ?);`;
         const [response] = await connection.execute(sql, [userObj.id, loginTokenString]);
+        
 
         if (response.affectedRows !== 1) {
             return res.status(500).json({
