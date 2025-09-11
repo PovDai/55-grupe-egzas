@@ -86,9 +86,12 @@ export function CreateContainer() {
               <input onChange={e => setValues({ ...values, time: e.target.value })}
                 type="datetime-local"
                 className="form-control"
-                id="release_date" />
-              
+                id="release_date"
+                min={new Date().toISOString().slice(0, 16)}
+                required
+              />
             </div>
+
            <div className="mb-3">
           <label htmlFor="rating" className="form-label">Įvertinimas</label>
           <input

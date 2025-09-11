@@ -165,7 +165,7 @@ export function Create() {
             </div>
 
 
-             <div className="mb-3">
+<div className="mb-3">
   <label htmlFor="release_date" className="form-label">Procedūros data ir laikas</label>
   <input
     onChange={e => setValues({ ...values, time: e.target.value })}
@@ -174,6 +174,7 @@ export function Create() {
     id="release_date"
     name="time"
     value={values.time}
+    min={new Date().toISOString().slice(0,16)} // <-- neleidžia praeities laikui
     required
   />
 </div>
