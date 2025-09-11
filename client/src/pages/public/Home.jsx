@@ -53,7 +53,7 @@ return (
       🌟 Pradėti dabar
     </button>
       </Fade>
-    </div>
+        </div>
   );
 }
 
