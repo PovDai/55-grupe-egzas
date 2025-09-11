@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 export function TestPage() {
     return (
         <div className="container flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-pink-200 via-yellow-100 to-blue-200 p-6">
@@ -13,7 +14,7 @@ Sveikas atvykęs! 🎉
 
 
 <motion.img
-  src="https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"
+  src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2cwN29zbXd3NWw5OXJ4ZWtuNmVhMzZqNDJndjU3Y3g0OG5jcmVxbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SWoXEoE1lA0uSQcF1h/giphy.gif"
   alt="Juokingas gifas"
   className="rounded-2xl shadow-lg"
   initial={{ scale: 0 }}
@@ -28,8 +29,9 @@ animate={{ opacity: 1 }}
 transition={{ delay: 1 }}
 className="mt-6 text-lg text-gray-700"
 >
-Čia tavo naujas juokingas pradžios puslapis 😄
-</motion.p>
+Funny Testing
+            </motion.p>
+            <Link className="btn btn-success" to='/testing/inner'>Go to Inner Testing</Link>
 </div>
     )
 }
