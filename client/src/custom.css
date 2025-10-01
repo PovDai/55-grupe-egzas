@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .min-page-height {
     min-height: 65vh;
 }
@@ -7,3 +11,48 @@
 body{
     background-color:darkcyan
 }
+.position{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    text-align: center;
+
+}
+.h1:hover{
+    filter:grayscale(50%);
+    filter: grayscale(80%);
+    filter: sepia(100%);
+    transition: 1s ease;
+}
+.suktis{
+    display: inline-block;
+    animation: sukimasis linear 5s infinite;
+}
+@keyframes sukimasis {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.raide {
+  display: inline-block;
+  animation: sukimasis 2s linear 2;
+}
+
+@keyframes sukimasis {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
