@@ -147,7 +147,7 @@ export function TestInner() {
             boxShadow: "0 1px 4px rgba(0,0,0,0.1)",
           }}
         >
-          Score: {score}
+          Rezultatas: {score}
         </div>
       </div>
 
