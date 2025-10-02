@@ -18,6 +18,7 @@ import { EditContainer } from './components/containers/EditContainer'
 import { ReadContainer } from './components/containers/ReadContainer'
 import { TestPage } from './pages/public/Test'
 import { TestInner } from './pages/public/TestInner'
+import { Weather } from './pages/public/Weather'
 
 
 
@@ -36,7 +37,8 @@ export function App() {
               <Route path='/logout' element={<LogoutPage />} />
             <Route path='/register' element={<RegisterPage />} />
             <Route path='/testing' element={<TestPage />} />
-            <Route path='/testing/:in' element={<TestInner/>}/>
+            <Route path='/testing/:in' element={<TestInner />} />
+            <Route path='/weather/:in' element={<Weather/>} />
            
         
           </Route>
