@@ -19,6 +19,7 @@ import { ReadContainer } from './components/containers/ReadContainer'
 import { TestPage } from './pages/public/Test'
 import { TestInner } from './pages/public/TestInner'
 import { Weather } from './pages/public/Weather'
+import { Calendar } from './pages/public/Calendar'
 
 
 
@@ -38,7 +39,8 @@ export function App() {
             <Route path='/register' element={<RegisterPage />} />
             <Route path='/testing' element={<TestPage />} />
             <Route path='/testing/:in' element={<TestInner />} />
-            <Route path='/weather/:in' element={<Weather/>} />
+            <Route path='/weather/:in' element={<Weather />} />
+            <Route path='calendar/:in' element={<Calendar/>} />
            
         
           </Route>
