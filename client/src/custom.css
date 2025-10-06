@@ -209,3 +209,75 @@ body{
   border-radius: 15px;
   border: none;
 }
+.calculator {
+  width: 260px;
+  background-color:black;
+  border-radius: 15px;
+}
+
+.calculator input {
+  height: 60px;
+}
+
+button {
+  height: 60px;
+}
+
+/* Fejerverkų efektas */
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  transform: translateX(-50%);
+  animation: explode 1.5s ease-out forwards;
+}
+
+.fireworks::before,
+.fireworks::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background: radial-gradient(circle, gold 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  animation: burst 1.5s ease-out forwards;
+}
+
+.fireworks::after {
+  background: radial-gradient(circle, red 0%, transparent 70%);
+}
+
+@keyframes explode {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) scale(0);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}

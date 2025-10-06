@@ -35,6 +35,8 @@ Funny Testing
             <Link className="btn btn-success ms-2" to='/weather/inner'>Weather App</Link>
             <Link className="btn btn-danger ms-2" to='/calendar/inner'>Christmas calendar</Link>
             <Link className="btn btn-warning ms-2" to='/Music/inner'>Christmas Music</Link>
+            <Link className="btn btn-secondary ms-2" to='/calculator/inner'>Calculator</Link>
+
 </div>
     )
 }
