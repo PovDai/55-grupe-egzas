@@ -22,6 +22,9 @@ import { Weather } from './pages/public/Weather'
 import { Calendar } from './pages/public/Calendar'
 import { Music } from './pages/public/Music'
 import { Calculator } from './pages/public/Calculator'
+import { Matrix } from './pages/public/Matrix'
+import { Checkers } from './pages/public/Checkers'
+
 
 
 
@@ -44,7 +47,9 @@ export function App() {
             <Route path='/weather/:in' element={<Weather />} />
             <Route path='/calendar/:in' element={<Calendar />} />
             <Route path='/music/:in' element={<Music />} />
-            <Route path='/calculator/:in' element={<Calculator/>}/>
+            <Route path='/calculator/:in' element={<Calculator />} />
+            <Route path='/matrix/:in' element={<Matrix />} />
+            <Route path='/checkers/:in' element={<Checkers/>}/>
            
         
           </Route>

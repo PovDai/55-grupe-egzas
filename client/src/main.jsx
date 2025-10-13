@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './bootstrap.min.css'
 import './custom.css'
+import './custom2.css'
 import { App } from './App.jsx'
 
 

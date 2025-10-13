@@ -1,0 +1,77 @@
+.board {
+display: grid;
+grid-template-columns: repeat(8, 60px);
+grid-template-rows: repeat(8, 60px);
+gap: 0;
+border: 4px solid #333;
+}
+
+
+@media (max-width: 500px) {
+.board {
+grid-template-columns: repeat(8, 10vw);
+grid-template-rows: repeat(8, 10vw);
+}
+}
+
+
+.square {
+width: 100%;
+height: 100%;
+user-select: none;
+cursor: pointer;
+}
+
+
+.square.light {
+background: #f0d9b5;
+}
+
+
+.square.dark {
+background: #b58863;
+}
+
+
+.square.selected {
+outline: 3px solid rgba(255, 215, 0, 0.9);
+box-shadow: 0 0 8px rgba(255,215,0,0.4) inset;
+}
+
+
+.piece {
+width: 70%;
+height: 70%;
+border-radius: 50%;
+box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+}
+
+
+.piece-black {
+background: #111;
+}
+
+
+.piece-white {
+background: #fff;
+border: 2px solid #ddd;
+}
+
+
+.square:hover .piece {
+transform: scale(1.03);
+transition: transform 120ms ease;
+}
+
+
+.container .col-auto {
+max-width: 520px;
+}
+
+
+.board.shadow-lg {
+border-radius: 6px;
+overflow: hidden;
+}
+
+
