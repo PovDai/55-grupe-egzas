@@ -74,4 +74,146 @@ border-radius: 6px;
 overflow: hidden;
 }
 
+.solar-container {
+  padding: 20px;
+  text-align: center;
+}
 
+.solar-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.solar-scene {
+  width: 90vmin;
+  height: 90vmin;
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #02030a, #071028 40%, #04060a 100%);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  margin: auto;
+}
+
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff28a, #ffb23b 40%, #ff7a00 65%);
+  box-shadow: 0 0 50px 20px rgba(255, 170, 50, 0.3),
+              0 0 90px 40px rgba(255, 140, 10, 0.2);
+}
+
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.planet-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.planet-and-label {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.planet {
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.planet:hover {
+  transform: scale(1.3);
+}
+
+.planet-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.controls {
+  width: 260px;
+  text-align: center;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.controls button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background: #1565c0;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal {
+  background: #101530;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h3 {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

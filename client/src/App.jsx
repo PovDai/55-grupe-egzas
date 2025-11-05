@@ -24,6 +24,7 @@ import { Music } from './pages/public/Music'
 import { Calculator } from './pages/public/Calculator'
 import { Matrix } from './pages/public/Matrix'
 import { Checkers } from './pages/public/Checkers'
+import { SolarSystem } from './pages/public/Solar'
 
 
 
@@ -49,7 +50,8 @@ export function App() {
             <Route path='/music/:in' element={<Music />} />
             <Route path='/calculator/:in' element={<Calculator />} />
             <Route path='/matrix/:in' element={<Matrix />} />
-            <Route path='/checkers/:in' element={<Checkers/>}/>
+            <Route path='/checkers/:in' element={<Checkers />} />
+            <Route path='/solar/:in' element={<SolarSystem/>}/>
            
         
           </Route>

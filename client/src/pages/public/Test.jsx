@@ -38,6 +38,7 @@ Funny Testing
             <Link className="btn btn-secondary ms-2" to='/calculator/inner'>Calculator</Link>
             <Link className="btn btn-success ms-2" to='/matrix/inner'>Matrix</Link>
             <Link className="btn btn-success ms-2" to='/checkers/inner'>Checkers</Link>
+            <Link className="btn btn-warning ms-2" to='/solar/inner'>Solar</Link>
 
 </div>
     )

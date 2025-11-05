@@ -83,6 +83,32 @@ app.use((err, req, res, next) => {
     return res.status(500).send('Server error');
 });
 
+app.get('/api/planet/:name', async (req, res) => {
+  const planetName = req.params.name;
+
+  try {
+    // 1. Vieša planetų API
+    const planetRes = await fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetName.toLowerCase()}`);
+    const planetData = await planetRes.json();
+
+    // 2. NASA APOD API – planetos pavadinimas kaip "title"
+    const nasaRes = await fetch(
+      `https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API_KEY}&title=${planetName}`
+    );
+    const nasaData = await nasaRes.json();
+
+    res.json({ ...planetData, imageUrl: nasaData.url || null });
+  } catch (err) {
+    console.error("Klaida gaunant planetos duomenis:", err);
+    res.status(500).json({ error: "Nepavyko gauti duomenų" });
+  }
+});
+
+
+
+
+
+
 app.get('*error', (req, res) => {
     return res.json({
         status: 'error',
